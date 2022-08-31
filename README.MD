@@ -38,3 +38,6 @@ cd .\PaymentContext.Tests\
 dotnet add reference ..\PaymentContext.Domain\PaymentContext.Domain.csproj
 cd..
 
+dotnet restore
+dotnet build
+
