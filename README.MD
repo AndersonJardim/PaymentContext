@@ -41,3 +41,6 @@ cd..
 dotnet restore
 dotnet build
 
+cd .\PaymentContext.Domain\
+del .\Class1.cs
+md Entities
