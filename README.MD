@@ -21,3 +21,7 @@ cd ..
 cd PaymentContext.Tests
 dotnet new mstest
 cd ..
+
+dotnet sln add PaymentContext.Domain\PaymentContext.Domain.csproj
+dotnet sln add PaymentContext.Shared\PaymentContext.Shared.csproj
+dotnet sln add PaymentContext.Tests\PaymentContext.Tests.csproj
