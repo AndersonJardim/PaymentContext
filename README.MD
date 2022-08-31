@@ -53,3 +53,6 @@ dotnet new classlib Payment.cs
 dotnet restore
 dotnet build
 
+cd .\PaymentContext.Domain\
+del .\Class1.cs
+md Entities
