@@ -34,3 +34,7 @@ dotnet add reference ..\PaymentContext.Shared\PaymentContext.Shared.csproj
 cd..
 
 
+cd .\PaymentContext.Tests\ 
+dotnet add reference ..\PaymentContext.Domain\PaymentContext.Domain.csproj
+cd..
+
