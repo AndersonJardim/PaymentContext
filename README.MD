@@ -49,3 +49,7 @@ cd Entities
 dotnet new classlib Student.cs
 dotnet new classlib Subscription.cs
 dotnet new classlib Payment.cs
+
+dotnet restore
+dotnet build
+
