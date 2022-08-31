@@ -44,3 +44,8 @@ dotnet build
 cd .\PaymentContext.Domain\
 del .\Class1.cs
 md Entities
+cd Entities
+
+dotnet new classlib Student.cs
+dotnet new classlib Subscription.cs
+dotnet new classlib Payment.cs
