@@ -29,3 +29,8 @@ dotnet sln add PaymentContext.Tests\PaymentContext.Tests.csproj
 dotnet build
 
 
+cd .\PaymentContext.Domain\
+dotnet add reference ..\PaymentContext.Shared\PaymentContext.Shared.csproj
+cd..
+
+
