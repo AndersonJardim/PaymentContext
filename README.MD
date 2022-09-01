@@ -69,7 +69,7 @@ cd PaymentContext.Tests
 md Entities
 cd Entities
 
-# ciar StudentTests.cs (conferir)
+# Criando: StudentTests.cs (conferir)
 dotnet new classlib StudentTests.cs
 
 # copiei o conteudo do UnitTest1.cs, para ter o modelo
@@ -90,3 +90,7 @@ cd..
 cd .\PaymentContext.Tests\
 del .\UnitTest1.cs
 cd..
+
+cd .\PaymentContext.Tests\
+md ValueObjects
+# Criando: DocumentTests.cs (conferir)
