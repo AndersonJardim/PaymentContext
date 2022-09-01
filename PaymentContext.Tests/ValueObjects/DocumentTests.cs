@@ -7,10 +7,33 @@ namespace PaymentContext.Tests
     [TestClass]
     public class DocumentTests
     {
-        [TestMethod]
-        public void AdicionarAssinatura()
-        {
+        //Red, Green, Refactor
 
+        [TestMethod]
+        public void ShouldReturnErrorWhenCNPJIsInvalid()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod]
+        public void ShouldReturnSucessWhenCNPJIsValid()
+        {
+            Assert.Fail();
+        }
+
+
+        
+
+        [TestMethod]
+        public void ShouldReturnErrorWhenCPFIsInvalid()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod]
+        public void ShouldReturnSucessWhenCPFIsValid()
+        {
+            Assert.Fail();
         }
     }
 }
