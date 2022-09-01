@@ -74,4 +74,17 @@ dotnet new classlib StudentTests.cs
 
 # copiei o conteudo do UnitTest1.cs, para ter o modelo
 
+cd..
+cd .\PaymentContext.Shared\
+dotnet add package flunt
+cd ..
+
+cd .\PaymentContext.Domain\
+dotnet add package flunt
+cd..
+
+cd .\PaymentContext.Tests\
+dotnet add package flunt
+cd..
+
 
