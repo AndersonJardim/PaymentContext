@@ -65,7 +65,7 @@ cd ..
 cd PaymentContext.Tests
 
 
-#Criando as classes: Student, Subscription e Payment
+# Criando as classes: Student, Subscription e Payment
 md Entities
 cd Entities
 
@@ -87,4 +87,6 @@ cd .\PaymentContext.Tests\
 dotnet add package flunt
 cd..
 
-
+cd .\PaymentContext.Tests\
+del .\UnitTest1.cs
+cd..
