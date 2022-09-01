@@ -29,6 +29,8 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
+            //if(subscription.Payments.Payment.Count == 0)
+
             // if(true)
             //     throw new Exception("");
 
@@ -55,6 +57,7 @@ namespace PaymentContext.Domain.Entities
             AddNotifications(new Contract()
                 .Requires()
                 .IsFalse(hasSubscriptionActive, "Student.Subscription", "Você já tem uma assinatura ativa.")
+                .IsGreaterThan(0, subscription.Payments.Count, "Student.Subscription", "Esta assinatura não possui pagamentos.")
             );    
             
             //alternativa 2:
