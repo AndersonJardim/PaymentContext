@@ -1,5 +1,8 @@
+//using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PaymentContext.Domain.Entities;
+//using PaymentContext.Domain.Enums;
+using PaymentContext.Domain.ValueObjects;
 
 namespace PaymentContext.Tests
 {
@@ -15,6 +18,12 @@ namespace PaymentContext.Tests
          //   student.AddSubscription(subscription);
 
             //var Payment = new PayPalPaymet();
+
+            //var name = new Name("Teste", "Teste");
+            //foreach(var not in name.Notifications){
+            //   not.Message;
+            //}
+
         }
     }
 }

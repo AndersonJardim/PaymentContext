@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+//using System.Linq;
+//using Flunt.Validations;
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Entities;
 
@@ -14,6 +16,8 @@ namespace PaymentContext.Domain.Entities
             Document = document;
             Email = email;
             _subscriptions = new List<Subscription>();
+
+            AddNotifications(name, document, email);
         }
         public Name Name { get; private set; }
         public Document Document { get; private set; }
@@ -23,6 +27,11 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
+            if(true)
+                throw new Exception("");
+
+            //Se o nome não tiver 30 caracteres...
+
             // Se já tiver uma assinatura ativa, cancela
             // Camceça todas as outras assinaturas e coloca esta como princial
             foreach(var sub in Subscriptions)
