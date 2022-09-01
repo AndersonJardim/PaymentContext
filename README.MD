@@ -46,6 +46,7 @@ del .\Class1.cs
 md Entities
 cd Entities
 
+# Criando as classes (conferir)(conferir os comandos corretos, via dos)
 dotnet new classlib Student.cs
 dotnet new classlib Subscription.cs
 dotnet new classlib Payment.cs
@@ -56,3 +57,21 @@ dotnet build
 cd .\PaymentContext.Domain\
 del .\Class1.cs
 md Entities
+
+# Criando as classes: Student, Subscription e Payment
+
+cd ..
+cd ..
+cd PaymentContext.Tests
+
+
+#Criando as classes: Student, Subscription e Payment
+md Entities
+cd Entities
+
+# ciar StudentTests.cs (conferir)
+dotnet new classlib StudentTests.cs
+
+# copiei o conteudo do UnitTest1.cs, para ter o modelo
+
+
