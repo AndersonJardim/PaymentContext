@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 //using System.Linq;
+using Flunt.Validations;
+//using System.Linq;
 //using Flunt.Validations;
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Entities;
@@ -27,19 +29,44 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
-            if(true)
-                throw new Exception("");
+            // if(true)
+            //     throw new Exception("");
 
-            //Se o nome não tiver 30 caracteres...
+            // //Se o nome não tiver 30 caracteres...
 
-            // Se já tiver uma assinatura ativa, cancela
-            // Camceça todas as outras assinaturas e coloca esta como princial
-            foreach(var sub in Subscriptions)
+            // // Se já tiver uma assinatura ativa, cancela
+            // // Camceça todas as outras assinaturas e coloca esta como princial
+            // foreach(var sub in Subscriptions)
+            // {
+            //     sub.Inactivate();
+            // }
+
+            // _subscriptions.Add(subscription);
+
+            var hasSubscriptionActive = false;
+            foreach(var sub in _subscriptions)
             {
-                sub.Inactivate();
+                if (sub.Active)
+                    hasSubscriptionActive = true;
             }
 
-            _subscriptions.Add(subscription);
+            //alternativa 1:
+            // //using Flunt.Validations;
+            AddNotifications(new Contract()
+                .Requires()
+                .IsFalse(hasSubscriptionActive, "Student.Subscription", "Você já tem uma assinatura ativa.")
+            );    
+            
+            //alternativa 2:
+            if(hasSubscriptionActive)            
+                AddNotification("Student.Subscription", "Você já tem uma assinatura ativa.");           
+
+            
+            //if (Valid)
+            //    _subscriptions.Add(subscription);
+            // Alternativa
+            // if (hasSubscriptionActive)
+            //     AddNotification("Student.Subscriptions", "Você já tem uma assinatura ativa");
         }
     }
 }
